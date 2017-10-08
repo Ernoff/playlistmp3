@@ -7,7 +7,8 @@ router.get('/download/:link',(req,res,next) => {
   let link = "https://www.youtube.com/watch?v="+req.params.link
   console.log(link)
   let video = youtubedl(link)
-
+  //res.pipe(video)
+  video.pipe(res)
   video.on('info', (info) => {
     console.log('Download started')
     console.log('filename: ' + info.filename)
@@ -16,7 +17,7 @@ router.get('/download/:link',(req,res,next) => {
 
   let i = Math.random()
 
-  video.pipe(fs.createWriteStream('myvideo'+i+'.mp4'))
+  //video.pipe(fs.createWriteStream('myvideo'+i+'.mp4'))
 
 })
 
