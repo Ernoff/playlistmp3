@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "jest",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -13,5 +14,8 @@
     "morgan": "~1.9.0",
     "normalize-port": "^1.0.0",
     "youtube-dl": "^1.12.2"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }
