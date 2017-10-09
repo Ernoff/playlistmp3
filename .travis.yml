@@ -15,4 +15,5 @@ install:
   -  npm install
 
 script: 
-  -  jest
+  -  npm run test
+
